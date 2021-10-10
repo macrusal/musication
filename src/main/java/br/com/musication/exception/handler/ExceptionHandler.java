@@ -25,7 +25,7 @@ class ExceptionHandlerController {
     @ExceptionHandler( SoundNotFoundException.class )
     public ResponseEntity< ErrorResponse > categoriaNotFound( SoundNotFoundException e, HttpServletRequest request) {
 
-        var error = new ErrorResponse().builder()
+        ErrorResponse error = new ErrorResponse().builder()
                 .mensagem( e.getMessage() )
                 .status( HttpStatus.NOT_FOUND.value() )
                 .timeStamp( System.currentTimeMillis() )
