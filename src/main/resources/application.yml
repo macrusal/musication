@@ -1,3 +1,11 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27018/db?retryWrites=true&w=majority
+  cloud:
+    config:
+      enabled: false
+
 aws:
   access_key_id: <SEU_ACCESS_KEY_ID>
   secret_access_key: <SEU_SECRET_KEY>

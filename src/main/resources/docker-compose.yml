@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  mongo.musication:
+    image: mongo:3.6
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo.musication:/data/db
+volumes:
+  mongo.musication:
